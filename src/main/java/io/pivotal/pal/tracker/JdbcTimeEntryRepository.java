@@ -55,7 +55,7 @@ public class JdbcTimeEntryRepository implements TimeEntryRepository {
     }
 
     public TimeEntry update(Long id, TimeEntry timeEntry) {
-        
+
         jdbcTemplate.update("UPDATE time_entries " +
                         "SET project_id = ?, user_id = ?, date = ?,  hours = ? " +
                         "WHERE id = ?",
